@@ -2584,7 +2584,6 @@ input, select, textarea {
 		justify-content: space-between;
 		background-color: #1f1815;
 		background-attachment: scroll,								scroll;
-		/* background-image: url("images/overlay.png"), url("../../images/bg.jpg"); */
 		animation: colorchange 10s; /* animation-name followed by duration in seconds*/
 		-webkit-animation: colorchange 10s; /* Chrome and Safari */
 		animation-iteration-count: infinite;
