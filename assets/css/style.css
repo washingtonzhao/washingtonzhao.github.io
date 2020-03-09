@@ -1,5 +1,5 @@
 #main{
-    font-family: Georgia;
+    font-family: 'Poppins', sans-serif;
     font-size: 100%;
     margin-left: 10%;
     width: 80%;
@@ -19,8 +19,7 @@
 
 #footer{
     position: relative;
-    margin-top: 10%;
-    bottom:10%;
+    margin-top: 6%;
     width: 100%;
     margin-right: auto;
     text-align: center;
