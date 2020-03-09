@@ -14,7 +14,7 @@
 text{
     fill: none; 
     stroke: #000000; 
-    font-size: 5em;
+    font-size: 5vw;
 }
 
 #content{
@@ -68,15 +68,9 @@ img{
     width: 15%;
 }
 
-@media only screen and (max-device-width: 480px){
+/* @media only screen and (max-device-width: 480px){
     img{
         height: 50%;
         width: 30%;
     }
-
-    text{
-        fill: none; 
-        stroke: #000000; 
-        font-size: 2em;
-    }
-}
+} */
