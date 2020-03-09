@@ -10,7 +10,6 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 		<script src="https://kit.fontawesome.com/494a9d0a74.js" crossorigin="anonymous"></script>
 		<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-
 	</head>
 
 	<body>
@@ -21,6 +20,16 @@
 					<title>Washington Zhao</title>
 					<text x="0" y="250" style="fill: none; stroke: #000000; font-size: 5em;">washington zhao</text>
 				</svg>
+				<script>
+					function isMobileDevice() {
+						return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+					};
+		
+					if(isMobileDevice){
+						document.getElementbyTagName("svg").setAttribute("width","50%");
+						document.getElementbyTagName("svg").setAttribute("height","10%");
+					}
+				</script>
 
 				<img id="bitmoji">
 				<script>
