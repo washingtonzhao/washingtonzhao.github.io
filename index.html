@@ -16,35 +16,25 @@
 		<div id="main">
 
 			<div id="name">
-				<svg version="1.1" width="1000" height="300">
+				<svg version="1.1" width="auto" height="auto">
 					<title>Washington Zhao</title>
-					<text x="0" y="250" style="fill: none; stroke: #000000; font-size: 5em;">washington zhao</text>
+					<text x="0%" y="85%">washington zhao</text>
 				</svg>
-				<script>
-					function isMobileDevice() {
-						return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-					};
-		
-					if(isMobileDevice){
-						document.getElementbyTagName("svg").setAttribute("width","50%");
-						document.getElementbyTagName("svg").setAttribute("height","10%");
-					}
-				</script>
-
+			</div>
+				
+			<div id="work">	
+				<div style="float:left; vertical-align: center;">
+				Incoming: SWE @ <b><a href="https://www.jpl.nasa.gov/" target="__blank">NASA JPL</a></b> <br/>
+				<span id="current">Currently: Machine Translation @ <b><a href="https://www.isi.edu/" target="__blank">USC_ISI</a></b>, 
+					CS & Econ/Math @ <b><a href="https://www.usc.edu" target="__blank">USC</a></b><br/></span>
+				Previously: Advanced Analytics @ <b><a href="https://www.raytheon.com" target="__blank">Raytheon</a></b>
+				</div>
 				<img id="bitmoji">
 				<script>
 					var d = new Date();
 					days = ["sunday","monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 					document.getElementById("bitmoji").setAttribute("src","assets/images/" + days[d.getDay()] + ".png");
 				</script>
-			</div>
-				
-			<div id="work">	
-				Incoming: SWE @ <b><a href="https://www.jpl.nasa.gov/" target="__blank">NASA JPL</a></b> <br/>
-				<span id="current">Currently: Machine Translation @ <b><a href="https://www.isi.edu/" target="__blank">USC_ISI</a></b>, 
-					CS & Econ/Math @ <b><a href="https://www.usc.edu" target="__blank">USC</a></b><br/></span>
-				Previously: Advanced Analytics @ <b><a href="https://www.raytheon.com" target="__blank">Raytheon</a></b>
-
 			</div>
 			<br/><br/>
 			<div id="content">
