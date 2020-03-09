@@ -70,13 +70,13 @@ img{
 
 @media only screen and (max-device-width: 480px){
     img{
-        height: 40%;
-        width: 25%;
+        height: 50%;
+        width: 30%;
     }
 
     text{
         fill: none; 
         stroke: #000000; 
-        font-size: 1em;
+        font-size: 2em;
     }
 }
