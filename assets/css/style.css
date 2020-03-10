@@ -76,6 +76,9 @@ i{
         display:none;
     }
     
+    #flexright{
+        width: 1%;
+    }
     text{
         fill: none; 
         stroke: #000000;
