@@ -68,7 +68,7 @@ i{
     height: 20vh;
     width: 50%;
     float: right;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 
@@ -80,6 +80,10 @@ i{
 }
     #parent{
         display: inline;
+    }
+    #flexRight{
+        display:none;
+        width: 0px;
     }
 
     text{
