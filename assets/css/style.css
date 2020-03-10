@@ -33,7 +33,7 @@ text{
 
 #footer{
     position: relative;
-    margin-top: 6%;
+    margin-top: 10%;
     width: 100%;
     margin-right: auto;
     text-align: center;
@@ -80,7 +80,7 @@ i{
     text{
         fill: none; 
         stroke: #000000; 
-        font-size: 8vw;
+        font-size: 2vw;
     }
 
     #work{
