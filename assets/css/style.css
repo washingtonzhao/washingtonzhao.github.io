@@ -72,10 +72,11 @@ i{
 
 
 @media screen and (max-width: 600px) {
-    img{
+    img, #bitmoji{
         display:none;
-    }
-    
+        width: 0px;
+
+}
     #parent{
         display: inline;
     }
