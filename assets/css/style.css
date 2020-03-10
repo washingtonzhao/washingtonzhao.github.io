@@ -79,5 +79,16 @@ img{
         stroke: #000000; 
         font-size: 8vw;
     }
+
+    #work{
+        font-size: 1em;
+        display: inline-block;
+        width: 100%;
+    }
+    
+    #content{
+        font-size: 0.8em;
+    }
+    
     
   }
