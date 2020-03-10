@@ -14,14 +14,23 @@
 
 	<body>
 		<div id="main">
+			<div id="parent">
+				<div id="name">
+					<svg version="1.1" width="100%" height="100%">
+						<title>Washington Zhao</title>
+						<text x="0%" y="80%">washington zhao</text>
+					</svg>
+				</div>
 
-			<div id="name">
-				<svg version="1.1" width="100%" height="100%">
-					<title>Washington Zhao</title>
-					<text x="0%" y="80%">washington zhao</text>
-				</svg>
+				<div id = "flexRight">
+					<img id="bitmoji">
+						<script>
+							var d = new Date();
+							days = ["sunday","monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+							document.getElementById("bitmoji").setAttribute("src","assets/images/" + days[d.getDay()] + ".png");
+						</script>
+				</div>
 			</div>
-				
 			<div id="work">	
 				<div style="float:left; vertical-align: center;">
 				Incoming: SWE @ <b><a href="https://www.jpl.nasa.gov/" target="__blank">NASA JPL</a></b> <br/>
@@ -29,13 +38,8 @@
 					CS & Econ/Math @ <b><a href="https://www.usc.edu" target="__blank">USC</a></b><br/></span>
 				Previously: Advanced Analytics @ <b><a href="https://www.raytheon.com" target="__blank">Raytheon</a></b>
 				</div>
-				<img id="bitmoji">
-				<script>
-					var d = new Date();
-					days = ["sunday","monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
-					document.getElementById("bitmoji").setAttribute("src","assets/images/" + days[d.getDay()] + ".png");
-				</script>
 			</div>
+			<br/><br/>
 			<div id="content">
 				Hey, I'm Washington! (sadly not the State)<br/><br/>
 				
