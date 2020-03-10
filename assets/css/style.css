@@ -81,9 +81,9 @@ i{
     #parent{
         display: inline;
     }
-    #flexRight{
-        display:none;
-        width: 0px;
+    
+    #name{
+        width: 100%;
     }
 
     text{
