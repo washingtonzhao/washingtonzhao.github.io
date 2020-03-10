@@ -75,12 +75,14 @@ i{
     img{
         display:none;
     }
-
+    
+    svg{
+        text-align: center;
+    }
     text{
         fill: none; 
         stroke: #000000;
-        text-align: center; 
-        font-size: 2.8vw;
+        font-size: 4vw;
     }
 
     #work{
