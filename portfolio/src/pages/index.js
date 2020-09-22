@@ -1,24 +1,35 @@
 import React from "react";
 import NavBar from "../components/NavBar";
-import Layout from "../components/layout";
 // import { css } from "@emotion/core";
 import styled from "@emotion/styled";
 import picture from "../../static/WashingtonZhao.png";
 import mq from "../constants/breakpoints";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedinIn,
+faTwitter,
+faMediumM,
+faGithub} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { config } from '@fortawesome/fontawesome-svg-core';
+
+// // Disable the auto CSS insertion
+// config.autoAddCss = false;
+
 
 const About = styled.div`
-  margin-left: 35rem;
+  margin-left: 25%;
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  height: 80vh;
+  height: 100%;
+  margin-top: 13rem;
 
   ${[mq[2]]}{
       flex-direction: column;
-      width: 100vw;
-      height: auto;
+      width: 100%;
       margin-left: 0;
-      margin-top: 2rem;
-      align-items: flex-start;
+      margin-top: 6rem;
   }
 `;
 
@@ -27,14 +38,47 @@ const Intro = styled.div`
   font-weight: normal;
   font-size: 1.1rem;
   line-height: 1.4rem;
-  width: 40rem;
+  width: 50%;
+  ${[mq[2]]}{
+    width: 80%;
+}
 `;
 
 const ProPic = styled.img`
-  margin: 0 auto;
-  height: 35rem;
-  width: 30rem;
+  margin: 0;
+  height: auto;
+  width: 30%;
+  ${[mq[2]]}{
+    margin: 2rem auto;
+    width: 80%;
+  }
 `;
+
+const Layout = styled.div`
+  height: 100%;
+  width: 100%;
+`
+
+const Social = styled.div`
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+`
+
+const SocialLink = styled.a`
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  padding: 0 15px 0 0;
+  color: grey;
+  opacity: 0.9;
+`
+
+const Linkedin = <FontAwesomeIcon icon={faLinkedinIn} size="2x" />;
+const Twitter = <FontAwesomeIcon icon={faTwitter} size="2x" />;
+const Medium = <FontAwesomeIcon icon={faMediumM} size="2x" />;
+const Github = <FontAwesomeIcon icon={faGithub} size="2x" />;
+const Email = <FontAwesomeIcon icon={faEnvelope} size="2x" />;
 
 export default function Home() {
   return (
@@ -52,7 +96,13 @@ export default function Home() {
         <br/><br/>In my free time, I like to read, write on Medium, play Ultimate Frisbee, and learn new development tools.
 
         I love to talk to new people about anything, please feel free to reach out to me on Twitter at @ZhaoWashington or by email at washingz@usc.edu!
-
+        <Social>
+          <SocialLink href="https://www.linkedin.com/in/washingtonzhao">{ Linkedin }</SocialLink> 
+          <SocialLink href="https://www.twitter.com/zhaowashington">{ Twitter }</SocialLink> 
+          <SocialLink href="https://www.medium.com/@washingtonzhao">{ Medium }</SocialLink> 
+          <SocialLink href="https://www.github.com/washingtonzhao">{ Github }</SocialLink> 
+          <SocialLink href="mailto:washingz@usc.edu">{ Email }</SocialLink> 
+        </Social>
         </Intro>
         <ProPic src={picture} alt="me!"/>
       </About>

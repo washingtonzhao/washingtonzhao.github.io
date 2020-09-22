@@ -6,5 +6,10 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: `Washington Zhao`,
+    siteUrl: `https://www.washingtonzhao.com`,
+    description: `XD`,
+  },
   plugins: [`gatsby-plugin-emotion`],
 }
