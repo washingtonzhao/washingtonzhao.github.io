@@ -11,5 +11,34 @@ module.exports = {
     siteUrl: `https://www.washingtonzhao.com`,
     description: `XD`,
   },
-  plugins: [`gatsby-plugin-emotion`],
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/content/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `software`,
+        path: `${__dirname}/src/content/software`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `product`,
+        path: `${__dirname}/src/content/product`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `teaching`,
+        path: `${__dirname}/src/content/teaching`,
+      },
+    },
+    `gatsby-plugin-emotion`,`gatsby-transformer-remark`,],
 }

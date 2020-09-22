@@ -138,7 +138,7 @@ class NavBar extends React.Component{
         event.preventDefault();
     }
     render(){
-        
+
         return(
             <>
             <MediaQuery minDeviceWidth={991.99}>
@@ -154,7 +154,7 @@ class NavBar extends React.Component{
                 </div>
                 : <Menu styles= { styles }>
                     <a id="home" className="menu-item" href="/">Home</a>
-                    <a id="about" className="menu-item" href="/about">Software</a>
+                    <a id="about" className="menu-item" href="/projects">Software</a>
                     <a id="contact" className="menu-item" href="/product">Product Management</a> 
                     <a id="contact" className="menu-item" href="/teaching">Teaching</a> 
                     <a id="contact" className="menu-item" href="/blog">Blog</a> 
@@ -170,6 +170,3 @@ class NavBar extends React.Component{
 }
 
 export default NavBar;
-/*
-
-            */

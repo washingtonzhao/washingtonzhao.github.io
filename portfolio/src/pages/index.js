@@ -2,7 +2,6 @@ import React from "react";
 import NavBar from "../components/NavBar";
 // import { css } from "@emotion/core";
 import styled from "@emotion/styled";
-import picture from "../../static/WashingtonZhao.png";
 import mq from "../constants/breakpoints";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn,
@@ -104,7 +103,7 @@ export default function Home() {
           <SocialLink href="mailto:washingz@usc.edu">{ Email }</SocialLink> 
         </Social>
         </Intro>
-        <ProPic src={picture} alt="me!"/>
+        <ProPic src="/WashingtonZhao.png" alt="me!"/>
       </About>
     </Layout>
   )
