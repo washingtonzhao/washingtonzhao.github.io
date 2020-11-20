@@ -15,13 +15,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `blog`,
-        path: `${__dirname}/src/content/blog`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `software`,
         path: `${__dirname}/src/content/software`,
       },
@@ -36,8 +29,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `teaching`,
-        path: `${__dirname}/src/content/teaching`,
+        name: `outreach`,
+        path: `${__dirname}/src/content/outreach`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `cursor`,
+        path: `${__dirname}/src/content/cursor`,
       },
     },
     `gatsby-plugin-emotion`,`gatsby-transformer-remark`,],

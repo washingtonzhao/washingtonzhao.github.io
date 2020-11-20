@@ -1,6 +1,6 @@
 ---
-title: "a"
-img: "/WashingtonZhao.png"
+title: "Duet"
+img: "/duet.png"
 type: "Software"
 ---
 

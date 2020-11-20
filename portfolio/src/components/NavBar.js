@@ -146,17 +146,19 @@ class NavBar extends React.Component{
                 matches
                 ?<div css={ SideBar }>
                 <Link css={ NavElement } to="/">Home</Link>
+                <Link css={ NavElement } to="/">About</Link>
                 <Link css={ NavElement } to="/projects">Software</Link>
                 <Link css={ NavElement } to="/product">Product Management</Link>
-                <Link css={ NavElement } to="/teaching">Teaching</Link>
+                <Link css={ NavElement } to="/outreach">Outreach</Link>
                 <Link css={ NavElement } to="/blog">Blog</Link>
                 <Link css={ NavElement } to="/resume">Resume</Link>
                 </div>
                 : <Menu styles= { styles }>
                     <a id="home" className="menu-item" href="/">Home</a>
+                    <a id="about" className="menu-item" href="/">About</a>
                     <a id="about" className="menu-item" href="/projects">Software</a>
                     <a id="contact" className="menu-item" href="/product">Product Management</a> 
-                    <a id="contact" className="menu-item" href="/teaching">Teaching</a> 
+                    <a id="contact" className="menu-item" href="/outreach">Outreach</a> 
                     <a id="contact" className="menu-item" href="/blog">Blog</a> 
                     <a id="contact" className="menu-item" href="/resume">Resume</a> 
                 </Menu>

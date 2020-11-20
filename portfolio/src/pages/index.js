@@ -82,7 +82,7 @@ const Email = <FontAwesomeIcon icon={faEnvelope} size="2x" />;
 export default function Home() {
   return (
     
-    <Layout>
+    <>
       <NavBar />
       <About>
         <Intro>
@@ -103,9 +103,9 @@ export default function Home() {
           <SocialLink href="mailto:washingz@usc.edu">{ Email }</SocialLink> 
         </Social>
         </Intro>
-        <ProPic src="/WashingtonZhao.png" alt="me!"/>
+        <ProPic src="/WashingtonZhao.jpg" alt="me!"/>
       </About>
-    </Layout>
+    </>
   )
 };
 

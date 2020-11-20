@@ -21,18 +21,18 @@ export default function Portfolio({ data }) {
   return (
     <div>
       <NavBar />
-      <Info dangerouslySetInnerHTML={{ __html: proj.html }} />
+      {/* <Info dangerouslySetInnerHTML={{ __html: proj.html }} /> */}
     </div>
   )
 }
 
-export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        title
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query($slug: String!) {
+//     markdownRemark(fields: { slug: { eq: $slug } }) {
+//       html
+//       frontmatter {
+//         title
+//       }
+//     }
+//   }
+// `

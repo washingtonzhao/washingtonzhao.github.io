@@ -29,7 +29,7 @@ const Work = styled.div`
 const ProjectList = styled.div`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
 `;
 
 export default function Product({ data }) {
@@ -39,27 +39,30 @@ export default function Product({ data }) {
         <Work>
         <h1>Product Management</h1>
         <ProjectList>
-            { data.allMarkdownRemark.edges.map(({ node }) => (
-                <Link to={"../" + node.frontmatter.title}><Project title={node.frontmatter.title} img={node.frontmatter.img} /></Link>
+            { data.allFile.edges.map(({ node }) => (
+                <Link to={"../" + node.childMarkdownRemark.frontmatter.title}><Project title={node.childMarkdownRemark.frontmatter.title} img={node.childMarkdownRemark.frontmatter.img} /></Link>
             ))}
         </ProjectList>
-    </Work>
+        </Work>
     </Layout>
     )
 };
 
-export const SoftwareQuery = graphql`
+export const ProductQuery = graphql`
     query {
-        allMarkdownRemark(sort: { fields: [frontmatter___title] order: DESC }) {
-        edges {
-            node {
-            frontmatter {
-                title
-                img
+        allFile(filter: {sourceInstanceName: {eq: "product"}}) {
+            edges {
+              node {
+                id
+                childMarkdownRemark {
+                  frontmatter {
+                    img
+                    title
+                  }
+                }
+              }
             }
-            }
-        }
-        }
+          }
     }
   
 `

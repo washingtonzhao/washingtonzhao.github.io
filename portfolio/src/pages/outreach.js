@@ -4,7 +4,7 @@ import NavBar from "../components/NavBar";
 import styled from "@emotion/styled";
 import mq from "../constants/breakpoints";
 import Project from "../components/Project";
-import picture from "../../static/WashingtonZhao.png";
+// import picture from "../../static/WashingtonZhao.png";
 import { graphql, Link } from "gatsby";
 
 
@@ -29,18 +29,18 @@ const Work = styled.div`
 const ProjectList = styled.div`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
 `;
 
-export default function Teaching({ data }) {
+export default function outreach({ data }) {
     return (
     <Layout>
         <NavBar />
         <Work>
         <h1>Teaching</h1>
         <ProjectList>
-            { data.allMarkdownRemark.edges.map(({ node }) => (
-                <Link to={"../" + node.frontmatter.title}><Project title={node.frontmatter.title} img={node.frontmatter.img} /></Link>
+            { data.allFile.edges.map(({ node }) => (
+                <Link to={"../" + node.childMarkdownRemark.frontmatter.title}><Project title={node.childMarkdownRemark.frontmatter.title} img={node.childMarkdownRemark.frontmatter.img} /></Link>
             ))}
         </ProjectList>
     </Work>
@@ -48,18 +48,20 @@ export default function Teaching({ data }) {
     )
 };
 
-export const SoftwareQuery = graphql`
+export const TeachingQuery = graphql`
     query {
-        allMarkdownRemark(sort: { fields: [frontmatter___title] order: DESC }) {
-        edges {
+        allFile(filter: {sourceInstanceName: {eq: "outreach"}}) {
+            edges {
             node {
-            frontmatter {
-                title
-                img
+                id
+                childMarkdownRemark {
+                frontmatter {
+                    img
+                    title
+                }
+                }
             }
             }
-        }
         }
     }
-  
 `

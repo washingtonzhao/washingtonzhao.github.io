@@ -6,7 +6,9 @@ import mq from "../constants/breakpoints";
 import Project from "../components/Project";
 import picture from "../../static/WashingtonZhao.png";
 import { graphql, Link } from "gatsby";
+import linkStyles from "./projects.module.css";
 
+import cursorLink from "../components/cursorLink";
 
 const Layout = styled.div`
   height: 100%;
@@ -29,37 +31,50 @@ const Work = styled.div`
 const ProjectList = styled.div`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
+`;
+
+const StyledLink = styled(props => <Link {...props} />)`
+    width: 300px;
+    height: 500px;
+    margin: 20px 40px 40px 0;
+
+    &:hover {
+        cursor: url('/duet.png');
+    }
 `;
 
 export default function Projects({ data }) {
     return (
-    <Layout>
+    <>
         <NavBar />
         <Work>
         <h1>Software Development</h1>
         <ProjectList>
-            { data.allMarkdownRemark.edges.map(({ node }) => (
-                <Link to={"../" + node.frontmatter.title}><Project title={node.frontmatter.title} img={node.frontmatter.img} /></Link>
+            { data.allFile.edges.map(({ node }) => (
+                <StyledLink to="/"><Project title={node.childMarkdownRemark.frontmatter.title} img={node.childMarkdownRemark.frontmatter.img} /></StyledLink>
             ))}
         </ProjectList>
-    </Work>
-    </Layout>
+        </Work>
+    </>
     )
 };
 
 export const SoftwareQuery = graphql`
     query {
-        allMarkdownRemark(sort: { fields: [frontmatter___title] order: DESC }) {
-        edges {
-            node {
-            frontmatter {
-                title
-                img
+        allFile(filter: {sourceInstanceName: {eq: "software"}}) {
+            edges {
+              node {
+                id
+                childMarkdownRemark {
+                  frontmatter {
+                    img
+                    title
+                  }
+                }
+              }
             }
-            }
-        }
-        }
+          }
     }
   
 `

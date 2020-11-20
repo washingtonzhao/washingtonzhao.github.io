@@ -1,7 +1,7 @@
 ---
-title: "Dogs rule!"
-img: "/WashingtonZhao.png"
-type: "Software"
+title: "Innovative Design"
+img: "/innod.png"
+type: "Product"
 ---
 
 Dogs are really sweet. 
