@@ -4,24 +4,22 @@ import { css } from "@emotion/core";
 import styled from "@emotion/styled";
 import mq from "../constants/breakpoints";
 
-
 const ProjectDiv = styled.div`
-    width: 300px;
-    height: 500px;
-    text-align: center;
-    display: inline-block;
+width: 300px;
+height: 500px;
+text-align: center;
+display: inline-block;
 
-    ${[mq[2]]}{
-        padding: 0 0 10px 0;
-        width: 300px;
-        height: 400px;
-    }
+${[mq[2]]}{
+    padding: 0 0 10px 0;
+    width: 300px;
+    height: 400px;
+}
 `;
 
-const ProjectImage = css`\
+const ProjectImage = css`
     height: 450px;
     width: 100%;
-
     ${[mq[2]]}{
         padding: 0 0 10px 0;
         width: 90%;
@@ -37,6 +35,19 @@ const Caption = css`
 `;
 
 export default function Project(props){
+
+    const ProjectImage = css`
+    height: 450px;
+    width: 100%;
+    cursor: url(${props.cursor}), pointer;
+    ${[mq[2]]}{
+        padding: 0 0 10px 0;
+        width: 90%;
+        height: 300px;
+    }
+`;
+
+
     return(
         <ProjectDiv>
             <img css={ProjectImage} src={props.img} alt="project image" />

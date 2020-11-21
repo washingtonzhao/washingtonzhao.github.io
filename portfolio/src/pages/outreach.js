@@ -4,7 +4,6 @@ import NavBar from "../components/NavBar";
 import styled from "@emotion/styled";
 import mq from "../constants/breakpoints";
 import Project from "../components/Project";
-// import picture from "../../static/WashingtonZhao.png";
 import { graphql, Link } from "gatsby";
 
 
@@ -32,6 +31,12 @@ const ProjectList = styled.div`
     justify-content: flex-start;
 `;
 
+const StyledLink = styled(props => <Link {...props} />)`
+    width: 300px;
+    height: 500px;
+    margin: 20px 40px 40px 0;
+`;
+
 export default function outreach({ data }) {
     return (
     <Layout>
@@ -40,7 +45,7 @@ export default function outreach({ data }) {
         <h1>Teaching</h1>
         <ProjectList>
             { data.allFile.edges.map(({ node }) => (
-                <Link to={"../" + node.childMarkdownRemark.frontmatter.title}><Project title={node.childMarkdownRemark.frontmatter.title} img={node.childMarkdownRemark.frontmatter.img} /></Link>
+                <StyledLink to={"../" + node.childMarkdownRemark.frontmatter.title}><Project title={node.childMarkdownRemark.frontmatter.title} img={node.childMarkdownRemark.frontmatter.img} cursor="/idea.png" /></StyledLink>
             ))}
         </ProjectList>
     </Work>

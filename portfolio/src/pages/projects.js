@@ -4,11 +4,7 @@ import NavBar from "../components/NavBar";
 import styled from "@emotion/styled";
 import mq from "../constants/breakpoints";
 import Project from "../components/Project";
-import picture from "../../static/WashingtonZhao.png";
 import { graphql, Link } from "gatsby";
-import linkStyles from "./projects.module.css";
-
-import cursorLink from "../components/cursorLink";
 
 const Layout = styled.div`
   height: 100%;
@@ -38,11 +34,8 @@ const StyledLink = styled(props => <Link {...props} />)`
     width: 300px;
     height: 500px;
     margin: 20px 40px 40px 0;
-
-    &:hover {
-        cursor: url('/duet.png');
-    }
 `;
+
 
 export default function Projects({ data }) {
     return (
@@ -52,7 +45,7 @@ export default function Projects({ data }) {
         <h1>Software Development</h1>
         <ProjectList>
             { data.allFile.edges.map(({ node }) => (
-                <StyledLink to="/"><Project title={node.childMarkdownRemark.frontmatter.title} img={node.childMarkdownRemark.frontmatter.img} /></StyledLink>
+                <StyledLink to="/"><Project title={node.childMarkdownRemark.frontmatter.title} img={node.childMarkdownRemark.frontmatter.img} cursor='/computer.png' /></StyledLink>
             ))}
         </ProjectList>
         </Work>
